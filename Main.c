@@ -16,39 +16,38 @@
 
 int main(){
 
-int input;
+int x;
+
 
   do{ // insiste no valor entre 0 e 3 pq nois eh comedia
-  char buffer[2];
-  //[2] = buffer de 2 caracteres S2
+
+  char buffer[1];
+
+  printf("\n======================\n[1]Download\n[2]Upload\n\n\n[-1]Sair\n======================\n");
+  printf("Digite seu numero de destino: \n");
   
-  printf("\n======================\n[1]Download\n[2]Upload\n\n\n[0]Sair\n======================\n");
-  printf("Digite seu destino: \n");
+  scanf("%s", &buffer);
   
-  //standard in ou teclado para os noobs como eu
-  fgets(buffer,2,stdin);
-  
-  if(sscanf(buffer,"%d", &input) != 1){
-  
-  //em teoria essa merda e pra ser segura pra caralho S2
+  //ele retorna o numero de sucesso
+  if(sscanf(buffer,"%d",&x) == 0){
+  printf("Favor digite UM(1) numero VALIDO.\n");
   }
+
+ } while (x < 0 || x > 3);
   
-  
- } while (input < 0 || input > 3);
- 
  //A MERDA DO "DO WHILE" NOA FUNCOINRA PUTA MERDA E UVO UMATAR AGLUEM
  
 
 
-  if (input == 0){
+  if (x == 0){
     printf("Fechamento Solicitado.\n");
-  return 0;
-  } if (input == 1){
+    return 0;
+  } 
+  
+  if (x == 1){
     printf("1%s\n", CHCK_SUCCESS);
-  } else if (input == 2){
+  } else if (x == 2){
     printf("2%s\n", CHCK_SUCCESS);
-  } else if (input == 3){
-    printf("3%s\n", CHCK_SUCCESS);
   } else {
     printf("%s\n", CHCK_ERROR);
   }
