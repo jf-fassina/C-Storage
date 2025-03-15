@@ -1,18 +1,11 @@
-#include <zip.h>
-#include <stdio.h>
-#include <stdlib.h>
+#include "main.h"
 
 /*
  * Debian Compile command 
  * cd "/home/fassina/Documentos/Codigos/C/C-Storage"
- * cc Main.c -lzip -o C-Storage_Main.out
+ * cc Main.c -o C-Storage_Main.out
  * ./C-Storage_Main.out
  */
-
-//ERROR CHECKPOINTS BECAUS YO SOY MACACO
-#define CHCK_SUCCESS "FULL BOX, 200"
-#define CHCK_ERROR "SADDAM HUSSEIN HIDING SPOT FOUND"
-
 
 int main(){
 
@@ -33,23 +26,23 @@ int x;
   printf("Favor digite UM(1) numero VALIDO.\n");
   }
 
- } while (x < 0 || x > 3);
+ } while (x == 0 || x < -1 || x > 3);
   
  //A MERDA DO "DO WHILE" NOA FUNCOINRA PUTA MERDA E UVO UMATAR AGLUEM
  
 
 
-  if (x == 0){
+  if (x == -1){
     printf("Fechamento Solicitado.\n");
     return 0;
   } 
   
-  if (x == 1){
-    printf("1%s\n", CHCK_SUCCESS);
-  } else if (x == 2){
-    printf("2%s\n", CHCK_SUCCESS);
+  if (x == 1){//Download
+    printf("1%s\n", CHCKS);
+  } else if (x == 2){//Upload
+    printf("2%s\n", CHCKS);
   } else {
-    printf("%s\n", CHCK_ERROR);
+    printf("%s\n", CHCKE);
   }
 
 
