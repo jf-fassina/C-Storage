@@ -1,4 +1,9 @@
-#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+#include "errors.h"
+
+#include "HComp.c"
 
 /*
  * Debian Compile command 
@@ -38,11 +43,15 @@ int x;
   } 
   
   if (x == 1){//Download
+
+
+
+
     printf("1%s\n", CHCKS);
   } else if (x == 2){//Upload
     printf("2%s\n", CHCKS);
   } else {
-    printf("%s\n", CHCKE);
+    printf("%s, %s\n", CHCKE, E777);
   }
 
 
