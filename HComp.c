@@ -11,32 +11,31 @@
  */
 
 
-char getSimb(const char *c){
+char getSimb(const char *_c){
 
-  FILE a = fopen(c, "r");
+  FILE arq = fopen(_c, "r");
 
-  if(a != NULL){
-
+  if(arq != NULL){
   fseek(f, 0, SEEK_END); // seek to end of file
   size = ftell(f);       // get current file pointer
   fseek(f, 0, SEEK_SET); // seek back to beginning of file
-  // proceed with allocating memory and reading the file
 
-  char s[size];
-  
-    do{
-      int i;
-      char lst;
-      
-      if(s[i] != lst){
-        fgets(s, size, a);
-        lst == s[i];
-      } 
-      ++i;
-    }while(size);
+  char buff[size][];
+  int i = 0;
+  char last;
+
+  do{
+    if(last == buff[i]){
+      i++
+    }
+
+
+
+    }while(arq != EOF);
 
   fclose(a);
   return s;
+
   } else {
     printf("%s, %s", CHCKE, E201);
   }

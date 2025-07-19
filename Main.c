@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <stdlib.h> 
 
 #include "errors.h"
 
@@ -16,9 +16,8 @@ int main(){
 
 int x;
 
-
-  do{ // insiste no valor entre 0 e 3 pq nois eh comedia
-
+  do{ // insiste no valor -1, 1 ou 2 pq nois eh comedia
+      //Não pode ser zero por que essa desgraça trata o 0 como erro ;(
   char buffer[1];
 
   printf("\n======================\n[1]Download\n[2]Upload\n\n\n[-1]Sair\n======================\n");
@@ -30,13 +29,8 @@ int x;
   if(sscanf(buffer,"%d",&x) == 0){
   printf("Favor digite UM(1) numero VALIDO.\n");
   }
-
- } while (x == 0 || x < -1 || x > 3);
+ } while (x == 0 || x < -1 || x > 2);
   
- //A MERDA DO "DO WHILE" NOA FUNCOINRA PUTA MERDA E UVO UMATAR AGLUEM
- 
-
-
   if (x == -1){
     printf("Fechamento Solicitado.\n");
     return 0;
@@ -51,7 +45,7 @@ int x;
   } else if (x == 2){//Upload
     printf("2%s\n", CHCKS);
   } else {
-    printf("%s, %s\n", CHCKE, E777);
+    printf("%s, %s\n", CHCKE, E601);
   }
 
 
