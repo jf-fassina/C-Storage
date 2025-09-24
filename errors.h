@@ -1,3 +1,6 @@
+#ifndef C_STORAGE_ERRORS_H
+#define C_STORAGE_ERRORS_H
+
 #define CHCKS "FULL BOX, 200"
 #define CHCKE "SADDAM HUSSEIN HIDING SPOT FOUND"
 //ERROR CHECKPOINTS BECAUS YO SOY MACACO
@@ -14,18 +17,13 @@
 #define E202A "203A"//download
 
 
-#define E301 "301"//permition denied
+#define E301 "301"//permissao negada
 
 #define E404 "404"//internet
 #define E404A "404A"//handshake
 
-#define E601 "601"//idk what happend
-#define E666 "666"//system corrupted
-
-#define E701 "701"//Node 
-#define E702 "702"//Node creation
-#define E703 "703"//bin tree
-#define E704 "704"//Node error
+#define E601 "601"//sla
+#define E666 "666"//Sistema Corrompido
 
 
-
+#endif //C_STORAGE_ERRORS_H
